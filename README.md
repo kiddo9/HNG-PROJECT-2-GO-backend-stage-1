@@ -64,7 +64,7 @@ Ensure you have the following installed:
 
 5. Example Usage (cURL):
     ```
-        curl -X GET http://localhost:8080/api/classify-number/?number=371
+        curl -X GET http://localhost:8080/api/classify-number?number=371
 
 Folder Structure
 
