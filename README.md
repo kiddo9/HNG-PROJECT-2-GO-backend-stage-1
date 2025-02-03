@@ -41,7 +41,7 @@ Ensure you have the following installed:
 
 2. Online URL:
     ```
-    https://hng-project-1-go-backend-production.up.railway.app/
+    hng-project-2-go-backend-stage-1-production.up.railway.app
 
 3. Get Intern Details
     
