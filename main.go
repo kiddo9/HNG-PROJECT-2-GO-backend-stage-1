@@ -18,7 +18,7 @@ func corsMiddleware(next http.Handler) http.Handler {
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/api/classify-number/", controllers.NumberClassificationController)
+	mux.HandleFunc("/api/classify-number", controllers.NumberClassificationController)
 	handler := corsMiddleware(mux)
 
 	port := ":8080"
