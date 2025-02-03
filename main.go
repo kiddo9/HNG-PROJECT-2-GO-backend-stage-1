@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// create the cors middleware
 func corsMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Origin", "*")
@@ -16,6 +17,7 @@ func corsMiddleware(next http.Handler) http.Handler {
 	})
 }
 
+// create the main function for code execution
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/api/classify-number", controllers.NumberClassificationController)

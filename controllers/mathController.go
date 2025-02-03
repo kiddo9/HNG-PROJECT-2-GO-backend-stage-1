@@ -11,6 +11,7 @@ import (
 	"strings"
 )
 
+// function to check if number enter is a prime number
 func IsPrimeNumber(number int) bool {
 
 	for num := 2; num < number; num++ {
@@ -22,6 +23,7 @@ func IsPrimeNumber(number int) bool {
 	return true
 }
 
+// function to check if number is perfect
 func IsPerfectNumber(number int) bool {
 	if number < 2 {
 		return false
@@ -32,13 +34,13 @@ func IsPerfectNumber(number int) bool {
 	for num := 1; num < number; num++ {
 		if number%num == 0 {
 			sum += num
-			fmt.Println(num, sum)
 		}
 	}
 
 	return sum == number
 }
 
+// funnction to check and add the properties of a numeber
 func NumberProperties(number int) []string {
 	Number := strconv.Itoa(number)
 	numberLength := len(Number)
@@ -61,10 +63,11 @@ func NumberProperties(number int) []string {
 	} else {
 		properties = append(properties, "even")
 	}
-	fmt.Print(sum)
+
 	return properties
 }
 
+// function to sum up the digits pf the number
 func SumOfNumber(number int) int {
 	Number := strconv.Itoa(number)
 	sum := 0
@@ -78,6 +81,7 @@ func SumOfNumber(number int) int {
 	return sum
 }
 
+// function to retrive fun fact from numberapi
 func FunFactRequest(number int) string {
 	url := fmt.Sprintf("http://numbersapi.com/%d/math", number)
 
@@ -98,6 +102,7 @@ func FunFactRequest(number int) string {
 	return string(body)
 }
 
+// the main controller function
 func NumberClassificationController(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 

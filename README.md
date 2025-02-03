@@ -48,7 +48,7 @@ Ensure you have the following installed:
     Endpoint: 
     This is the url endpoint. you can change the number or integer to any number of choose
     ```
-    GET '/api/classify-number/?number=371'
+    GET '/api/classify-number?number=371'
 
 
  4.  Expected Response Format:
